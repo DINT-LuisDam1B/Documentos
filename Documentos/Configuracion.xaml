@@ -6,14 +6,21 @@
         xmlns:local="clr-namespace:Documentos"
         mc:Ignorable="d"
         Title="Configuracion" Height="450" Width="800" SizeToContent="WidthAndHeight">
-    <StackPanel x:Name="contenedor_StackPanel" Orientation="Vertical">
-        <DockPanel>
-            <TextBlock x:Name="Ancho_TextBlock" DockPanel.Dock="Left" Text="Ancho"/>
-            <TextBox x:Name="Ancho_TextBox" />
-        </DockPanel>
-        <DockPanel>
-            <TextBlock x:Name="Alto_TextBlock" DockPanel.Dock="Left" Text="Alto"/>
-            <TextBox x:Name="Alto_TextBox" />
-        </DockPanel>
-    </StackPanel>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="Ancho_TextBlock" Text="Ancho"/>
+        <TextBox x:Name="Ancho_TextBox" Grid.Column="1"/>
+        <TextBlock x:Name="Alto_TextBlock" Grid.Row="1" Text="Alto"/>
+        <TextBox x:Name="Alto_TextBox" Grid.Row="1" Grid.Column="1"/>
+
+
+    </Grid>
 </Window>
