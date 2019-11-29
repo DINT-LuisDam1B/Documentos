@@ -37,7 +37,8 @@ namespace Documentos
 
         private void Configuracion_Button_Click(object sender, RoutedEventArgs e)
         {
-
+            Configuracion configuracion = new Configuracion();
+            configuracion.ShowDialog();
         }
     }
 }

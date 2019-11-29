@@ -5,22 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Documentos"
         mc:Ignorable="d"
-        Title="Configuracion" Height="450" Width="800" SizeToContent="WidthAndHeight">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
+        Title="Configuracion" Height="450" Width="800" SizeToContent="WidthAndHeight" ResizeMode="NoResize">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button x:Name="acptar_Buttom" Content="Aceptar" Margin="5"/>
+            <Button x:Name="cancel_Button" Content="Cancelar" Margin="5"/>
+        </StackPanel>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="4*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
 
-        <TextBlock x:Name="Ancho_TextBlock" Text="Ancho"/>
-        <TextBox x:Name="Ancho_TextBox" Grid.Column="1"/>
-        <TextBlock x:Name="Alto_TextBlock" Grid.Row="1" Text="Alto"/>
-        <TextBox x:Name="Alto_TextBox" Grid.Row="1" Grid.Column="1"/>
-
-
-    </Grid>
+            <TextBlock x:Name="Ancho_TextBlock" Text="Ancho" VerticalAlignment="Center"/>
+            <TextBox x:Name="Ancho_TextBox" Grid.Column="1" Margin="5" Width="300"/>
+            <TextBlock x:Name="Alto_TextBlock" Grid.Row="1" Text="Alto" VerticalAlignment="Center"/>
+            <TextBox x:Name="Alto_TextBox" Grid.Row="1" Grid.Column="1" Margin="5" Width="300"/>
+        </Grid>
+        
+    </DockPanel>
+    
 </Window>
